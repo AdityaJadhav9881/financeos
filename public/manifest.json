@@ -1,0 +1,13 @@
+{
+  "name": "Finance OS",
+  "short_name": "FinanceOS",
+  "description": "Personal financial tracking dashboard",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00e5ff",
+  "icons": [
+    { "src": "/icons/icon-192.webp", "sizes": "192x192", "type": "image/webp" },
+    { "src": "/icons/icon-512.webp", "sizes": "512x512", "type": "image/webp" }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "appId": "com.aditya.financeos",
+  "appName": "Finance OS",
+  "webDir": "dist",
+  "plugins": {
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#000000",
+      "overlaysWebView": false
+    },
+    "Keyboard": {
+      "resize": "none",
+      "scrollPadding": false,
+      "style": "DARK"
+    }
+  }
+}
