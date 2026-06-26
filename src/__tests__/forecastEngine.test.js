@@ -20,11 +20,15 @@ describe('generateForecast', () => {
     expect(result.hasEnoughData).toBe(false);
   });
 
-  it('returns empty forecast when only income exists', () => {
+  it('returns flat forecast with 0 burn when only income exists', () => {
     const txs = [makeTx(500, 1, 'income'), makeTx(300, 2, 'income')];
     const result = generateForecast(txs, { cash: 1000, upi: 500 });
-    expect(result.forecast).toEqual([]);
+    expect(result.forecast.length).toBe(14);
     expect(result.hasEnoughData).toBe(false);
+    result.forecast.forEach((entry) => {
+      expect(entry.predictedBurn).toBe(0);
+      expect(entry.projectedBalance).toBe(1500);
+    });
   });
 
   it('returns hasEnoughData=false when fewer than 3 days have data', () => {
